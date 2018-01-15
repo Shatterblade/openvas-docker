@@ -2,10 +2,11 @@
 ARG VERSION=latest
 FROM kalilinux/kali-linux-docker:${VERSION}
 
-#Update packages
-RUN apt-get update -y && apt-get upgrade -y \
-    apt-get install openvas -y —no-install-recommends \
-    openvas-setup \
+#Update packages, Install OpenVAS, Setup OpenVAS, Set default password,
+RUN apt-get update -yq && \
+    apt-get upgrade -yq && \
+    apt-get install openvas -yq -—no-install-recommends && \
+    openvas-setup && \
     openvasmd --user=admin --new-password=admin
 
 #Expose openvas ports - MAKE SURE TO RUN WITH -P
