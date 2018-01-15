@@ -5,7 +5,7 @@ FROM kalilinux/kali-linux-docker:${VERSION}
 #Update packages, Install OpenVAS, Setup OpenVAS, Set default password,
 RUN apt-get update -yq && \
     apt-get upgrade -yq && \
-    apt-get install openvas -yq -—no-install-recommends && \
+    apt-get install -yq -—no-install-recommends openvas && \
     openvas-setup && \
     openvasmd --user=admin --new-password=admin
 
