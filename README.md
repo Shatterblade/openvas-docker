@@ -15,5 +15,7 @@ docker attach openvas
 
 # Other info
 Default OpenVAS login is admin:admin
+
 -P is to forward ports to host system
+
 You can access it from the host system at localhost:9392
