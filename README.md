@@ -1,4 +1,4 @@
-# What is this?
+# What is this
 This is a docker image for the OpenVAS vulnerability scanning
 
 # How do I get this
@@ -12,3 +12,8 @@ After this initial setup, to return to the container, do
 docker start openvas
 docker attach openvas
 ```
+
+# Other info
+Default OpenVAS login is admin:admin
+-P is to forward ports to host system
+You can access it from the host system at localhost:9392
